@@ -19,7 +19,7 @@ This repository contains a dynamic simulation model of a packed absorption colum
 
 This model uses the Julia language and the SciML ecosystem. Install required packages using Julia's package manager:
 
-"""julia
+```julia
 using Pkg
 Pkg.add([
     "DifferentialEquations",
@@ -29,7 +29,7 @@ Pkg.add([
     "DomainSets",
     "Plots"
 ])
-"""
+```
 
 ---
 
@@ -37,7 +37,7 @@ Pkg.add([
 
 1. Ensure the following project structure:
 
-"""
+```
 .
 ├── src/
 │   ├── simulation.jl         # Main simulation script
@@ -46,7 +46,7 @@ Pkg.add([
 ├── Manifest.toml             # Package version lock file
 ├── README.md                 # This file
 └── LICENSE                   # License information
-"""
+```
 
 2. Make sure `exp_data.jl` defines experimental input for Tobiesen Run 1:
    - `Q_v_m3h_run1`, `T_v_in_C_run1`, `P_in_kPa_run1`, `yCO2_molar_dry_run1`
@@ -68,10 +68,10 @@ Pkg.add([
 
 3. Run the simulation from the Julia REPL or a script:
 
-"""julia
+```julia
 include("exp_data.jl")
 include("simulation.jl")
-"""
+```
 
 4. The script will print:
    - Simulated vs. experimental CO₂ absorbed [kg/h]
